@@ -235,7 +235,7 @@ To optimize the model's parameters, the `AdamW` optimizer is used, well-suited f
 
 ---
 
-## Resutls
+## Results
 
 ---
 
