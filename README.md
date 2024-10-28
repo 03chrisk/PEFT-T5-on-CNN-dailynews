@@ -16,7 +16,6 @@ This project involves fine-tuning the T5-base model on the CNN/Daily Mail datase
   - [Full Fine-Tuning](#full-fine-tuning)
 - [Results](#results)
 - [Known Issues & Limitations](#known-issues--limitations)
-- [Future Work](#future-work)
 - [Additional Resources](#additional-resources)
 - [Contributors](#contributors)
 
