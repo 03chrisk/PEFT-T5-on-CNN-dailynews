@@ -121,6 +121,12 @@ The dataset is **pre-split** into three sets:
 - **Test Set**: 11,490 articles, used to evaluate the model’s performance.
 - **Validation Set**: 13,368 articles, used to fine-tune and validate the model during training.
 
+Due to computational cost and time constraints, we use a subset of the dataset:
+
+- **Training Set**: 20,000 articles, selected for training.
+- **Validation Set**: 750 articles, used to fine-tune and validate the model during training.
+- **Test Set**: 11,490 articles, using the full test set to evaluate the model’s performance.
+
 Each data entry contains:
 
 - `article`: The full news article.
