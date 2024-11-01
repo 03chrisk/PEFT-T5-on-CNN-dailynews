@@ -1,13 +1,16 @@
 # T5-base Fine-tuning for Summarization with Instructional Prompts
-
-## Introduction
+---
+## 📖 Introduction
 
 This project involves fine-tuning the T5-base model on the CNN/Daily Mail dataset using LoRA (Low-Rank Adaptation) and traditional full fine-tuning. Additionally, instructional prompts like "Summarize this article:" are incorporated to enhance the model's summarization performance. The fine-tuned models are compared to the original T5-base model's summarization capabilities without fine-tuning. The aim is to observe the improvements in performance brought by fine-tuning and prompt engineering techniques.
+
+---
 
 ## Table of Contents
 
 - [Installation](#installation)
 - [System Requirements](#system-requirements)
+- [Reproducibility](#reproducibility)
 - [Dataset](#dataset)
 - [Model](#model)
 - [Project Overview](#project-overview)
@@ -18,8 +21,10 @@ This project involves fine-tuning the T5-base model on the CNN/Daily Mail datase
 - [Known Issues & Limitations](#known-issues--limitations)
 - [Additional Resources](#additional-resources)
 - [Contributors](#contributors)
+  
+---
 
-## Installation
+## 💾 Installation
 
 To set up the project environment, follow these steps:
 
@@ -39,7 +44,7 @@ To set up the project environment, follow these steps:
 
 ---
 
-## System Requirements
+## 🖥️ System Requirements
 
 To run the fine-tuning and evaluation scripts efficiently, the following system requirements are recommended:
 
@@ -54,7 +59,7 @@ To run the fine-tuning and evaluation scripts efficiently, the following system 
 The models in this project were trained on an **NVIDIA A100 GPU** with 40 GB of memory, using the computing resources provided by the **University of Groningen's Habrok Computing Cluster**. This hardware setup significantly accelerated the training process and enabled efficient handling of large datasets.
 
 ---
-## Reproducibility 
+## 🔄 Reproducibility 
 
 Reproducing the results of this project requires careful attention to environment setup, dataset handling, and training configurations. Below are some guidelines to help ensure that you can replicate the findings as closely as possible:
 
@@ -90,7 +95,7 @@ CUDA processes can be **non-deterministic**, meaning that even with fixed seeds,
 
 ---
 
-## Dataset
+## 📂 Dataset
 
 The dataset utilized for this project is the **CNN/Daily Mail Dataset** (version 3.0.0) from the Hugging Face `datasets` library. This dataset is widely used for text summarization tasks and contains over 300,000 news articles paired with corresponding summaries. Each article is a comprehensive news piece, while the summary provides a concise overview, making it ideal for training and evaluating summarization models.
 
@@ -127,7 +132,7 @@ Each data entry contains:
 
 ---
 
-## Model
+## 🤖 Model
 
 The model used for this project is the **T5-base**, a transformer-based model developed by Google. T5, or **Text-to-Text Transfer Transformer**, is designed to convert various language processing tasks into a unified text-to-text format. This approach allows T5 to handle a wide range of NLP tasks, including summarization, translation, question answering, and more, using a single framework.
 
@@ -143,19 +148,19 @@ The model used for this project is the **T5-base**, a transformer-based model de
 
 ---
 
-## Project Overview
+## 📝 Project Overview
 
 This project focuses on improving the performance of the T5-base model for text summarization using fine-tuning techniques. It includes strategies like **Prompt Engineering**, **Parameter-Efficient Fine-Tuning (PEFT) with LoRA**, and **Full Fine-Tuning**. Each method offers unique advantages in improving model accuracy and efficiency. Below are explanations of the general intuitions behind eahc method, however for more details see the report in the repository.
 
 ---
 
-### Prompt Engineering
+### 🎯 Prompt Engineering
 
 Prompt Engineering involves crafting specific instructions or prompts to guide the model's output. In this project, an instructional prompt like `"Summarize this article:"` is added to the input text, aiming to improve the clarity and relevance of the generated summaries. This technique leverages the model's pre-trained capabilities, improving its performance without altering the underlying parameters.
 
 ---
 
-### PEFT (Parameter-Efficient Fine-Tuning) with LoRA
+### 🧪 PEFT (Parameter-Efficient Fine-Tuning) with LoRA
 
 PEFT (Parameter-Efficient Fine-Tuning) is a technique designed to adjust only a subset of the model's parameters, instead of all of them, to reduce computational costs. This project utilizes **LoRA (Low-Rank Adaptation)**, which fine-tunes specific low-rank matrices within the model. This approach enables efficient training with reduced memory requirements and faster convergence, making it suitable for scenarios where computational resources are limited.
 
@@ -200,7 +205,7 @@ For LoRA fine-tuning, the `AdamW` optimizer is employed, and a linear learning r
 
 ---
 
-### Full Fine-Tuning
+### 🏋️ Full Fine-Tuning
 
 Full Fine-Tuning updates all the parameters of the pre-trained model using the target dataset—in this case, the CNN/Daily Mail dataset. This approach allows the model to learn task-specific nuances in detail, often resulting in superior performance for complex tasks. However, it requires significant computational resources since the entire model is optimized during training.
 
@@ -235,15 +240,15 @@ To optimize the model's parameters, the `AdamW` optimizer is used, well-suited f
 
 ---
 
-## Results
+## 📊 Results
 
 ---
 
-## Known Issues & Limitations
+## ⚠️ Known Issues & Limitations
 
 --- 
 
-## Additional Resources
+## 📚 Additional Resources
 
 For more in-depth information and further reading, check out the following resources:
 
@@ -259,7 +264,7 @@ These resources should provide a solid foundation for understanding the methodol
 
 ---
 
-## Contributors
+## 🤝 Contributors
 
 A big thank you to everyone who contributed to this project:
 
