@@ -30,8 +30,8 @@ To set up the project environment, follow these steps:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-repo-name.git
-   cd your-repo-name
+   git clone https://github.com/03chrisk/PEFT-T5-on-CNN-dailynews.git
+   cd PEFT-T5-on-CNN-dailynews
 
 2. **Set Up an Environment**
     ```bash
