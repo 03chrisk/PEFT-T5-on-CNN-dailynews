@@ -156,7 +156,7 @@ This project focuses on improving the performance of the T5-base model for text 
 
 ### 🎯 Prompt Engineering
 
-Prompt Engineering involves crafting specific instructions or prompts to guide the model's output. In this project, an instructional prompt like `"Summarize this article:"` is added to the input text, aiming to improve the clarity and relevance of the generated summaries. This technique leverages the model's pre-trained capabilities, improving its performance without altering the underlying parameters.
+Prompt Engineering involves crafting specific instructions or prompts to guide the model's output. In this project, an instructional prompt like `"Provide a detailed and concise summary of this article:"` is added to the input text, aiming to improve the clarity and relevance of the generated summaries. This technique leverages the model's pre-trained capabilities, improving its performance without altering the underlying parameters.
 
 ---
 
