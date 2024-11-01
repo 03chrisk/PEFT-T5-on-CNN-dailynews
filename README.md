@@ -48,7 +48,7 @@ To set up the project environment, follow these steps:
 
 To run the fine-tuning and evaluation scripts efficiently, the following system requirements are recommended:
 
-- **Python**: 3.8+
+- **Python**: 3.10+
 - **GPU**: NVIDIA A100 GPU with at least 40 GB of memory (recommended for faster training)
 - **CUDA**: Compatible version for your GPU and PyTorch setup
 - **RAM**: 16 GB or higher
