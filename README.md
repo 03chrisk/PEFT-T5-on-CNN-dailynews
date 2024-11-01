@@ -175,13 +175,13 @@ To manage the fine-tuning process with LoRA, the `Seq2SeqTrainingArguments` obje
 #### Key Training Hyperparameters
 
 **Training Dynamics**:
-- **Learning Rate**: `1e-4` — A moderately higher learning rate is used to accelerate convergence for LoRA parameters.
-- **Batch Size**: `4` — A larger batch size is feasible due to the reduced parameter set.
-- **Epochs**: `2` — Two passes over the dataset to balance between learning capacity and overfitting.
+- **Learning Rate**: `1e-5` — A moderately higher learning rate is used to accelerate convergence for LoRA parameters.
+- **Batch Size**: `6` — A larger batch size is feasible due to the reduced parameter set.
+- **Epochs**: `1` — Two passes over the dataset to balance between learning capacity and overfitting.
 - **Gradient Accumulation Steps**: `2` — Accumulates gradients over 2 steps to simulate a larger effective batch size without exceeding memory limits.
 
 **Regularization & Stability**:
-- **Weight Decay**: `0.001` — Applies a small penalty to model weights to help prevent overfitting.
+- **Weight Decay**: `0.1` — Applies a small penalty to model weights to help prevent overfitting.
 - **Evaluation Interval**: Every `20%` of training progress — Provides frequent checkpoints to monitor model performance.
 - **Loss Function**: `Cross-Entropy Loss` — Used as the standard loss function for sequence-to-sequence tasks.
 
