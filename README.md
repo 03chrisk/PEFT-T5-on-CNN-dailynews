@@ -2,7 +2,7 @@
 ---
 ## 📖 Introduction
 
-This project involves fine-tuning the T5-base model on the CNN/Daily Mail dataset using LoRA (Low-Rank Adaptation) and traditional full fine-tuning. Additionally, instructional prompts like "Summarize this article:" are incorporated to enhance the model's summarization performance. The fine-tuned models are compared to the original T5-base model's summarization capabilities without fine-tuning. The aim is to observe the improvements in performance brought by fine-tuning and prompt engineering techniques.
+This project involves fine-tuning the T5-base model on the CNN/Daily Mail dataset using LoRA (Low-Rank Adaptation) and traditional full fine-tuning. Additionally, instructional prompts like "Provide a detailed and concise summary of this article: " are incorporated to enhance the model's summarization performance. The fine-tuned models are compared to the original T5-base model's summarization capabilities without fine-tuning. The aim is to observe the improvements in performance brought by fine-tuning and prompt engineering techniques.
 
 ---
 
