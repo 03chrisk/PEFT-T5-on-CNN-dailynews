@@ -202,7 +202,7 @@ To manage the fine-tuning process with LoRA, the `Seq2SeqTrainingArguments` obje
 For LoRA fine-tuning, the `AdamW` optimizer is employed, and a linear learning rate scheduler with a warmup phase is implemented to ensure stable learning progression.
 
 **Optimization Settings**:
-- **Learning Rate**: `1e-4` — A slightly higher learning rate for faster adaptation during LoRA fine-tuning.
+- **Learning Rate**: `1e-5` — A slightly higher learning rate for faster adaptation during LoRA fine-tuning.
 - **Weight Decay**: `0.1` — Regularization to mitigate overfitting.
 - **Warmup Steps**: `10%` of the total training steps — A warmup phase to ease the model into the training.
 - **Betas**: `(0.9, 0.999)` — Controls the decay rates for the moving averages of the gradient and its square in AdamW.
@@ -223,7 +223,7 @@ As in PEFT, to manage the fine-tuning process, the `Seq2SeqTrainingArguments` ob
 
 **Training Dynamics**:
 - **Learning Rate**: `5e-5` — A low learning rate ensures stable parameter updates, reducing the risk of overshooting minima.
-- **Batch Size**: `8` — Small batch size due to memory constraints, compensated by gradient accumulation.
+- **Batch Size**: `6` — Small batch size due to memory constraints, compensated by gradient accumulation.
 - **Epochs**: `1` — Two passes over the dataset, ensuring enough exposure without overfitting.
 - **Gradient Accumulation Steps**: `2` — Accumulates gradients over 8 steps to simulate a larger effective batch size.
 
