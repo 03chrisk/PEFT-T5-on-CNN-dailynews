@@ -52,7 +52,7 @@ To run the fine-tuning and evaluation scripts efficiently, the following system 
 - **GPU**: NVIDIA A100 GPU with at least 40 GB of memory (recommended for faster training)
 - **CUDA**: Compatible version for your GPU and PyTorch setup
 - **RAM**: 16 GB or higher
-- **Disk Space**: At least 50 GB free for storing datasets and model checkpoints
+- **Disk Space**: At least 50 GB free for storing datasets and model checkpoints (very generous estimate)
 
 ### Training Hardware
 
@@ -76,7 +76,7 @@ Reproducing the results of this project requires careful attention to environmen
 
 3. **Hardware & Performance**:
    - The training was conducted on an **NVIDIA A100 GPU** with 40 GB of memory. Using a similar GPU will help replicate the performance metrics.
-   - Differences in hardware architecture (e.g., using a different GPU or CPU) may lead to slight variations in results.
+   - Differences in hardware architecture (e.g., using a different GPU) may lead to slight variations in results.
 
 ### Note on CUDA Non-Determinism:
 
@@ -112,7 +112,7 @@ To load the dataset, the following code snippet is used:
 from datasets import load_dataset
 
 # Load the CNN/Daily Mail dataset
-ds = load_dataset("cnn_dailymail", "3.0.0")
+ds = load_dataset("abisee/cnn_dailymail", "3.0.0")
 ```
 
 The dataset is **pre-split** into three sets:
@@ -250,11 +250,11 @@ To optimize the model's parameters, the `AdamW` optimizer is used, well-suited f
 
 The evaluation of different configurations of the T5-base model on the CNN/Daily Mail dataset showed significant improvements in performance when applying prompting, LoRA, and full fine-tuning. Key findings include:
 
-**Prompting**: Applying prompting alone improved performance by around 4% on average (excluding BLEU), suggesting that while prompting helps guide the model, it is not sufficient for task-specific adaptation.
+**Prompting**: Applying prompting alone improved performance by around 3% on average (excluding BLEU), suggesting that while prompting helps guide the model, it is not sufficient for task-specific adaptation.
 
-**LoRA + Prompting**: The combination of LoRA and prompting achieved an average performance increase of 27% across all metrics, with particularly strong improvements in ROUGE and BLEU scores. This configuration significantly enhanced the model’s ability to produce cohesive, human-like summaries.
+**LoRA + Prompting**: The combination of LoRA and prompting achieved an average performance increase of 33% across all metrics, with particularly strong improvements in ROUGE and BLEU scores. This configuration significantly enhanced the model’s ability to produce cohesive, human-like summaries.
 
-**Full Fine-Tuning + Prompting**: Full fine-tuning with prompting resulted in the highest performance, with a further 5% average increase over LoRA. This approach demonstrated superior phrase alignment, fluency, and semantic accuracy.
+**Full Fine-Tuning + Prompting**: Full fine-tuning with prompting resulted in the highest performance, with a further 3% average increase over LoRA. This approach demonstrated superior phrase alignment, fluency, and semantic accuracy.
 
 While the fine-tuned models showed considerable improvements, they still fall short of state-of-the-art benchmarks, largely due to the limited parameter size of T5-base compared to larger models like T5-11b. Nonetheless, these results highlight the effectiveness of fine-tuning and prompting in improving summarization performance, and they provide a strong baseline for further research.
 
