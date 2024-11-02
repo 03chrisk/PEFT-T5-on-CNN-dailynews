@@ -254,7 +254,7 @@ The evaluation of different configurations of the T5-base model on the CNN/Daily
 
 **LoRA + Prompting**: The combination of LoRA and prompting achieved an average performance increase of 33% across all metrics, with particularly strong improvements in ROUGE and BLEU scores. This configuration significantly enhanced the model’s ability to produce cohesive, human-like summaries.
 
-**Full Fine-Tuning + Prompting**: Full fine-tuning with prompting resulted in the highest performance, with a further 3% average increase over LoRA. This approach demonstrated superior phrase alignment, fluency, and semantic accuracy.
+**Full Fine-Tuning + Prompting**: Full fine-tuning with prompting resulted in the highest performance, with a further 2% average increase over LoRA. This approach demonstrated superior phrase alignment, fluency, and semantic accuracy.
 
 While the fine-tuned models showed considerable improvements, they still fall short of state-of-the-art benchmarks, largely due to the limited parameter size of T5-base compared to larger models like T5-11b. Nonetheless, these results highlight the effectiveness of fine-tuning and prompting in improving summarization performance, and they provide a strong baseline for further research.
 
